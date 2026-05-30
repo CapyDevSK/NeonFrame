@@ -1,0 +1,265 @@
+body {
+    background-color: #141414;
+    color: #c9c6c6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #101014;
+    padding: 15px 30px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.right input {
+    background-color: #3F3F3F;
+    color: rgba(229, 229, 229, 0.978);
+    box-shadow: -2px 2px 20px #ffffffde;
+    border-radius: 40px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 0px 20px #eeeeeea9;
+    border-radius: 40px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.right input::placeholder{
+    color: rgb(229, 229, 229);
+    font-size: 15px;
+}
+
+.right input:hover {
+    box-shadow: 0px 0px 30px #646464;
+    transform: scale(1.20);
+    transition: 0.3s;
+}
+
+.right input:focus {
+    box-shadow: 0px 0px 30px #ff2b2b;
+    transform: scale(1.20);
+    transition: 0.3s;
+    outline: none;
+}
+
+.left,
+.right {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left {
+    gap: 15px;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.nick {
+    display: flex;
+}
+
+.N:hover{
+    text-shadow: 0 0 15px #f469b1, 0 0 20px #ff0505;
+    transform: scale(1.05);
+    cursor: none;
+}
+
+.F:hover{
+    text-shadow: 0 0 15px #8dbbf9, 0 0 20px #0537ff;
+    transform: scale(1.05);
+    cursor: none;
+}
+
+.N {
+    font-size: 50px;
+    margin: 0;
+    color: #e9dce6;
+    text-shadow: 0 0 10px #f469b1, 0 0 15px #ff0505;
+    font-weight: 300;
+    font-family: "Montserrat Underline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.F {
+    font-size: 50px;
+    margin: 0;
+    color: #e9dce6;
+    text-shadow: 0 0 10px #8dbbf9, 0 0 15px #0537ff;
+    font-weight: 300;
+    font-weight: 300;
+    font-family: "Montserrat Underline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.bc {
+    margin-left: 50px;
+    background: linear-gradient(180deg, #8b0909, #3b0000);
+    color: #ffffff;
+    border: 1px solid #ff1d1d;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 18px #ff000080;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bc:hover{
+    background: linear-gradient(180deg, #ff1c1c, #690000);
+    box-shadow: 0 0 28px #ff1c1c;
+    transform: scale(1.05);
+}
+
+main {
+    box-shadow: 2px 1px 40px #FF0707;
+    margin-left: 200px;
+    margin-right: 200px;
+    flex: 1;
+}
+
+footer {
+    background-color: #101014;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 30px;
+    height: 180px;
+}
+
+.imgLogo {
+    width: 220px;
+    height: auto;
+    position: relative;
+    left: -150px;
+}
+
+.logope {
+    margin-top: 0;
+}
+
+.selecao {
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.selecao button {
+    background-color: #141414;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 1px 2px 5px #FF0707;
+    color: #c9c6c6;
+    border: none;
+    padding: 25px 60px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.selecao button:hover {
+    box-shadow: 0px 0px 30px #ff2b2b;
+    transform: scale(1.20);
+    transition: 0.3s;
+}
+
+.selecao button:focus {
+    box-shadow: 0px 0px 30px #ff2b2b;
+    transform: scale(1.20);
+    transition: 0.3s;
+}
+
+.corpin {
+    margin-top: 100px;
+    gap: 30px;
+    background-color: #1E1E1E;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.corpin h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+@media (max-width: 900px) {
+    header {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .left {
+        width: auto;
+        justify-content: center;
+        order: 1;
+    }
+
+    .nick {
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: center;
+        order: 3;
+    }
+
+    .bc {
+        margin-left: 0;
+    }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .selecao {
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    .selecao button {
+        font-size: 22px;
+        padding: 15px 35px;
+    }
+
+    footer {
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .imgLogo {
+        position: static;
+        width: 180px;
+    }
+}
