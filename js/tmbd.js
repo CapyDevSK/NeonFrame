@@ -36,6 +36,8 @@ async function carregarFilmesTMDB() {
 
                     <p>${sinopseCurta}</p>
 
+                    <button onclick="abrirDetalhesTMDB(${filme.id})" class="btn-detalhes"> Ver detalhes </button>
+
                 </div>
 
             </div>
@@ -55,3 +57,8 @@ btnAvancar.addEventListener("click", () => {
 btnVoltar.addEventListener("click", () => {
     secaoTMDB.scrollLeft -= 350;
 });
+
+function abrirDetalhesTMDB(id) {
+    localStorage.setItem("filmeSelecionadoId", id);
+    window.location.href = "detalhes.html";
+}
