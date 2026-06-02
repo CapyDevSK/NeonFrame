@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-    <title>NeonFrame</title>
+        <link rel="stylesheet" href="global.css">
+    <title>Base</title>
 </head>
 
 <body>
-    <header>
 
+    <header>
         <div class="left">
-            <button class="bc">Cadastrar</button>
+            <button class="bc">Cadastro</button>
             <button class="bc">Entrar</button>
         </div>
 
@@ -31,34 +30,15 @@
         <div class="right">
             <input type="text" placeholder="Buscar">
         </div>
-
     </header>
 
     <main>
         <div class="corpin">
-            <section class="selecao">
-                <button>Filmes</button>
-                <button>Lançamentos</button>
-                <button>Lanchonete</button>
-                <button>Combos</button>
-            </section>
-            <h2>Destaques</h2>
-            <section class="destaque"></section>
-            <h2>Promoções</h2>
-            <section class="promo"></section>
-            <h2>Em Cartaz</h2>
-            <div class="carrossel-container">
-                <button class="seta seta-esquerda" id="btnVoltarTMDB">‹</button>
-
-                <section class="tmdb-filmes"></section>
-
-                <button class="seta seta-direita" id="btnAvancarTMDB">›</button>
-            </div>
+            <section id="detalhesFilme"></section>
         </div>
     </main>
 
     <footer>
-
         <div class="logope">
             <img src="img/ChatGPT Image 9 de mai. de 2026, 19_02_57.png" alt="Logo NeonFrame" class="imgLogo">
 
@@ -79,8 +59,8 @@
         </div>
     </footer>
 
-    <script src="js/home.js"></script>
-    <script src="js/tmbd.js"></script>
+    <script scr="js/detalhes.js"></script>
+
 </body>
 
 </html>

@@ -35,3 +35,35 @@
     color: #ff2a2a;
     font-size: 22px;
 }
+
+.link-card{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 250px;
+}
+
+.linkcard *{
+    text-decoration: none;
+    color: inherit;
+}
+
+.tmdb-filmes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+.tmdb-filmes::-webkit-scrollbar{
+    height: 8px;
+}
+
+.tmdb-filmes::-webkit-scrollbar-thumb{
+    background: #ff2a2a;
+    border-radius: 10px;
+}
+
+.tmdb-filmes::-webkit-scrollbar-track{
+    background: #111;
+}
