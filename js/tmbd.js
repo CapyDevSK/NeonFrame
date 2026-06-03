@@ -62,3 +62,36 @@ function abrirDetalhesTMDB(id) {
     localStorage.setItem("filmeSelecionadoId", id);
     window.location.href = "detalhes.html";
 }
+
+const API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTZkMmI2NDBlNGJjNmI2NzgzODY3NmVlMWVmNTQ1MyIsIm5iZiI6MTc4MDQzODc2NS40MDEsInN1YiI6IjZhMWY1NmVkYmNiZDM3ODcxNzFlNzUyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lMRfGJz4c1OJYmMQVFCogyBZ58ZXMLG_9pXGT5j9Os8";
+const IMG_URL = "https://image.tmdb.org/t/p/w500";
+
+async function buscarFilmes(url) {
+    const resposta = await fetch(url);
+    const dados = await resposta.json();
+    return dados.results;
+}
+
+async function carregarDestaques() {
+    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pt-BR`;
+
+    const filmes = await buscarFilmes(url);
+    const destaque = document.querySelector(".destaque");
+
+    destaque.innerHTML = "";
+
+    filmes.slice(0, 3).forEach(filme => {
+        destaque.innerHTML += `
+            <div class="card-filme">
+                <img src="${IMG_URL + filme.poster_path}" alt="${filme.title}">
+                <div class="info-filme">
+                    <h3>${filme.title}</h3>
+                    <p>${filme.overview || "Sinopse indisponível."}</p>
+                    <button>Ver detalhes</button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+carregarDestaques();
