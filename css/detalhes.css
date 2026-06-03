@@ -72,3 +72,18 @@
     line-height: 1.7;
     font-size: 15px;
 }
+.detalhes-card button {
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.detalhes-card button:hover {
+    background-color: #a00000;
+}
