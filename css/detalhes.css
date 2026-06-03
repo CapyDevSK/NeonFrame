@@ -72,3 +72,20 @@
     line-height: 1.7;
     font-size: 15px;
 }
+
+.btn-carrinho {
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+.btn-carrinho:hover {
+    background-color: #a00000;
+}

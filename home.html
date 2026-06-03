@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/detalhes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>Detalhes do Filme | NeonFrame</title>
+
+    <title>NeonFrame</title>
 </head>
 
 <body>
-
     <header>
+
         <div class="left">
-            <button class="bc" onclick="window.location.href='home.html'">Início</button>
             <button class="bc" onclick="window.location.href='carrinho.html'">Carrinho</button>
         </div>
 
@@ -30,19 +30,38 @@
         <div class="right">
             <input type="text" placeholder="Buscar">
         </div>
+
     </header>
 
     <main>
         <div class="corpin">
-            <section id="detalhesFilme"></section>
-            <h2>Curiosidades do Cinema</h2>
-            <section class="posts-api"></section>
+            <section class="selecao">
+                <button>Filmes</button>
+                <button>Lançamentos</button>
+                <button>Lanchonete</button>
+                <button>Combos</button>
+            </section>
+            <h2>Destaques</h2>
+            <section class="destaque"></section>
+            <h2>Lançamentos</h2>
+            <section class="lancamentos"></section>
+            <h2>Em Cartaz</h2>
+            <div class="carrossel-container">
+                <button class="seta seta-esquerda" id="btnVoltarTMDB">‹</button>
+
+                <section class="tmdb-filmes"></section>
+
+                <button class="seta seta-direita" id="btnAvancarTMDB">›</button>
+            </div>
+
         </div>
     </main>
 
     <footer>
+
         <div class="logope">
             <img src="img/ChatGPT Image 9 de mai. de 2026, 19_02_57.png" alt="Logo NeonFrame" class="imgLogo">
+
             <p>NeonFrame © 2026</p>
         </div>
 
@@ -60,8 +79,7 @@
         </div>
     </footer>
 
-    <script src="js/detalhes.js"></script>
-
+    <script src="js/tmbd.js"></script>
 </body>
 
 </html>

@@ -107,14 +107,14 @@ header {
 
 main {
     box-shadow: 2px 1px 40px #FF0707;
-    margin: 140px auto 0 auto;
     width: min(1200px, 90%);
     flex: 1;
+    margin: 0 auto;
 }
 
 .corpin {
     background-color: #1E1E1E;
-    padding: 40px 20px;
+    padding: 180px 20px 40px 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
